@@ -1,0 +1,36 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+sdist/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.doc
+*.pdf
+
+# Virtual environments
+.venv/
+env/
+ENV/
+env.bak/
+venv/
+venv.bak/
+.venv*/
+
+# uv-specific
+.uv_cache/
+.venv.uv/           # uv sometimes creates this
+uv.lock   
+docs/
+notes.md
+
+.ipynkernel_checkpoints/
+.ipynb_checkpoints/
+sandbox/

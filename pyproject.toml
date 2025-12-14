@@ -1,0 +1,62 @@
+[project]
+name = "edustash"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "scikit-learn",
+  "pandas",
+  "matplotlib",
+  "seaborn",
+  "streamlit>=1.52.1",
+  "sweetviz>=2.3.1",
+  "loguru>=0.7.3",
+]
+
+[dependency-groups]
+dev = [
+    "black",
+    "flake8",
+    "jupyter",
+    "isort",
+    "pytest",
+    "pytest-cov",
+    "ipython",
+]
+[tool.uv]
+default-groups = ["dev"]    # optional
+
+[tool.setuptools]
+zip-safe = false
+include-package-data = true
+
+[tool.setuptools.packages]
+find = { where = ["src"], namespaces = true }
+
+
+[tool.black]
+line-length = 88
+target-version = ['py312']
+exclude = '''
+/(
+    \.git
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+preview = true
+
+
+[tool.isort]
+atomic = true
+profile = "black"
+line_length = 88
+skip_gitignore = true
+known_first_party = ["black"]
+
